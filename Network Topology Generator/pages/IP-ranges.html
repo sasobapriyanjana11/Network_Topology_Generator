@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Ranges</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-light border-right">
+            <div class="sidebar-header">
+                <img id="logo" src="/assets/logo-2.jpeg">
+                <!-- <h3>Network Topology Generator</h3> -->
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/pages/dashbord.html" id="dashboardBtn">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/index.html">Generator</a>
+                </li>
+                <li>
+                    <a href="/pages/help.html" id="helpBtn">Help</a>
+                </li>
+                <li>
+                    <a href="/pages/IP-ranges.html" id="ipRangesBtn">IP Ranges</a>
+                </li>
+                
+                <li>
+                    <a href="/pages/login.html" id="logoutBtn">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="content" class="container mt-5">
+            <h1 class="mb-4">IP Ranges</h1>
+            <div id="ipRangesContent">
+                <!-- IP Ranges will be displayed here -->
+            </div>
+            <a href="javascript:history.back();" class="btn btn-primary mt-4">Back</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Retrieve IP ranges from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const ipRangesContent = localStorage.getItem('ipRanges');
+            document.getElementById('ipRangesContent').innerHTML = ipRangesContent || 'No IP ranges available.';
+        });
+    </script>
+</body>
+</html>

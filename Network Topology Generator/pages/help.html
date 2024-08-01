@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help and Documentation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/help-style.css">
+    
+</head>
+<body>
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-light border-right">
+            <div class="sidebar-header">
+                <img id="logo" src="/assets/logo-2.jpeg">
+                <!-- <h4 class="text-center">Network Topology Generator</h4> -->
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/pages/dashbord.html" id="dashboardBtn">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/index.html">Generator</a>
+                </li>
+                <li>
+                    <a href="/pages/help.html" id="helpBtn">Help</a>
+                </li>
+                <li>
+                    <a href="/pages/IP-ranges.html" id="ipRangesBtn">IP Ranges</a>
+                </li>
+                
+                <li>
+                    <a href="/pages/login.html" id="logoutBtn">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="content" class="container mt-5">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="card-title mb-4">ℹ️ Help and Documentation ℹ️</h3>
+                    <p>This tool allows you to create and visualize network topologies. Follow these steps:</p>
+                    <ul>
+                        <li>👉🏽 Enter the number of nodes and select an office size, then click 'Submit'.</li>
+                        <li>👉🏽 Click on the canvas to add more nodes if needed. The nodes will be placed randomly within the office dimensions.</li>
+                        <li>👉🏽 Use the 'Simulate Data Transfer' button to visualize data flow between nodes.</li>
+                        <li>👉🏽 Use the 'Export as PNG' button to save your network topology as an image.</li>
+                        <li>👉🏽 Can remove node by right-clicking on a node, which removes it from the topology.</li>
+                    </ul>
+
+                    <ul>
+                       <li>👉firewall: A firewall helps protect your network by filtering incoming and outgoing traffic based on an organization\'s previously established security policies.</li> 
+                       <li>👉 vpn: A VPN (Virtual Private Network) provides a secure connection over the internet, encrypting your data and hiding your online activities.</li>  
+                       <li>👉encryption: Encryption ensures that data sent over the network is protected from unauthorized access by converting it into a secure code that can only be decrypted by authorized parties.</li>  
+                       <li> 👉ids: An IDS (Intrusion Detection System) monitors network traffic for suspicious activity and alerts the network administrator to potential threats.</li>
+                    </ul>
+                    <h4 class="mt-4">Examples:</h4>
+                    <p>For a small office with 5 nodes, choose the small office size and enter 5 as the number of nodes. You will see a ring topology suggested.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        // Functions to handle navigation
+        document.getElementById('dashboardBtn').addEventListener('click', function() {
+            window.location.href = '/pages/dashbord.html';
+        });
+
+        document.getElementById('helpBtn').addEventListener('click', function() {
+            window.open('/pages/help.html', '_blank');
+        });
+
+        document.getElementById('ipRangesBtn').addEventListener('click', function() {
+            window.location.href = '/pages/IP-ranges.html';
+        });
+    </script>
+</body>
+</html>

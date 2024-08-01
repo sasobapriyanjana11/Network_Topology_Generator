@@ -1,0 +1,68 @@
+      body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+        #ipRangesContent {
+            font-family: Arial, sans-serif;
+        }
+        .btn {
+            border-radius: 5px;
+        }
+        #sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+        }
+        .sidebar-header {
+            margin-bottom: 20px;
+        }
+        #sidebar .components {
+            padding: 0;
+        }
+        #sidebar .components li {
+            margin-bottom: 10px;
+        }
+        #sidebar .components a {
+            color: #343a40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        #sidebar .components a:hover {
+            color: #007bff;
+        }
+        #content {
+            margin-left: 260px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.5rem;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .btn {
+            border-radius: 0.5rem;
+            padding: 0.5rem 1.5rem;
+        }
+        #networkContainer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            border-radius: 0.5rem;
+        }
+        #topologyName, #ipRanges {
+            background-color: #f1f1f1;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+        #topologyName h3, #ipRanges h3 {
+            margin-bottom: 1rem;
+        }
+   

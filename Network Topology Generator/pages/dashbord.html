@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Planner Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        #networkContainer {
+            border: 1px solid #ccc;
+            background-color: #f8f9fa;
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body onload="init()">
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <nav id="sidebar" class="bg-light border-right" style="width: 250px;">
+            <div class="sidebar-header">
+                <img id="logo" src="/assets/logo-2.jpeg">
+                <!-- <h3>Network Topology Generator</h3> -->
+            </div>
+            <ul class="list-unstyled components">
+                <li>
+                    <a href="/pages/dashbord.html" id="dashboardBtn">Dashboard</a>
+                </li>
+                <li>
+                    <a href="/index.html">Generator</a>
+                </li>
+                <li>
+                    <a href="/pages/help.html" id="helpBtn">Help</a>
+                </li>
+                <li>
+                    <a href="/pages/IP-ranges.html" id="ipRangesBtn">IP Ranges</a>
+                </li>
+                <li>
+                    <a href="/pages/login.html" id="logoutBtn">Login</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <div id="content" class="container mt-5" style="flex-grow: 1;">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h1 class="card-title text-center mb-4">Network Security Planner Dashboard</h1>
+                    
+                    <!-- Charts -->
+                    <div class="container">
+                        <!-- <h1 class="my-4">Network Security Planner Dashboard</h1> -->
+                        
+                        <div class="row">
+                            <div class="col-md-4">
+                                <canvas id="nodeDistributionChart"></canvas>
+                            </div>
+                            <div class="col-md-4">
+                                <canvas id="securityRequirementsChart"></canvas>
+                            </div>
+                            <div class="col-md-4">
+                                <canvas id="riskAssessmentChart"></canvas>
+                            </div>
+                           
+                        </div>
+
+                        <div class="row mt-4">
+                           
+                            <div class="col-md-4">
+                                <canvas id="networkLoadChart"></canvas>
+                            </div>
+                            <div class="col-md-4">
+                                <canvas id="topologyTypeUsageChart"></canvas>
+                            </div>
+
+                            <div class="col-md-4">
+                                <canvas id="responseTimeChart"></canvas>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom Script -->
+    <script src="/js/dashbord.js"></script>
+</body>
+</html>
