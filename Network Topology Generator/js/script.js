@@ -227,6 +227,9 @@ function updateIPRanges(numNodes) {
         ipRanges.push(`192.168.0.${i}`);
     }
     document.getElementById('ipRanges').innerText = `IP Ranges: ${ipRanges.join(', ')}`;
+
+    // Store IP ranges in localStorage
+    localStorage.setItem('ipRanges', ipRanges.join(', '));
 }
 
 // Suggest security requirements based on number of nodes and office size
@@ -308,9 +311,9 @@ function simulateDataTransfer() {
     alert(`Simulating data transfer through nodes: ${path.join(' -> ')}`);
 }
 
-// Function to open help documentation in a new window
+// Function to open genarator documentation in a new window
 function openHelpDocumentation() {
-    window.open('/pages/help.html', '_blank');
+    window.open('/Network Topology Generator/index.html', '_blank');
 }
 
 // Initialize network
